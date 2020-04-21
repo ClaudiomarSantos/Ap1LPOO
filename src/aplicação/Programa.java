@@ -76,6 +76,8 @@ public class Programa {
 		// status dos jogadores após partida.
 
 		partida.getTimeCasa().imprimeJogadores();
+		System.out.println();
+		partida.getTimeVisitante().imprimeJogadores();
 
 		sc.close();
 	}

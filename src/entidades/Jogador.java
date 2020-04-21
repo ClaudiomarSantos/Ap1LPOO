@@ -7,10 +7,21 @@ public abstract class Jogador {
 	private Integer gols = 0;
 	private Integer camisa = 0;
 
+	public Jogador(String nome, Integer idade, Integer habilidade, Integer camisa) {
+		this.nome = nome;
+		this.idade = idade;
+		this.habilidade = habilidade;
+		this.camisa = camisa;
+	}
+
 	public Jogador(String nome, Integer idade, Integer habilidade) {
 		this.nome = nome;
 		this.idade = idade;
 		this.habilidade = habilidade;
+	}
+
+	public Integer getIdade() {
+		return idade;
 	}
 
 	public String getNome() {
@@ -38,9 +49,15 @@ public abstract class Jogador {
 	}
 
 	public Integer somaGol(int gol) {
-		gol = 0;
-		this.gols += gol++;
+		
+		this.gols += gol;
 		return gols;
+	}
+
+	@Override
+	public String toString() {
+		return getNome() + ", idade: " + getIdade() + ", Habilidade: " + getHabilidade() + ", gols: " + getGols()
+				+ ", Camisa: " + getCamisa();
 	}
 
 }

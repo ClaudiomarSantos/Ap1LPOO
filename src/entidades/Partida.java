@@ -24,19 +24,18 @@ public class Partida {
 		return timeVisitante;
 	}
 
-	public void golCasa(int gol) {
-		gol = 0;
-		placarCasa += gol++;
+	public void golCasa() {
+		
+		placarCasa ++;
 
 	}
 
-	public void golVisitante(int gol) {
-		gol = 0;
-		placarVisitante += gol++;
+	public void golVisitante() {
+		placarVisitante ++;
 	}
 
 	public String placar() {
 		return data.getDayOfMonth() + "/" + data.getMonthValue() + "/" + data.getYear() + "\n" + timeCasa.getNome()
-				+ " " + placarCasa + " x " + timeVisitante.getNome() + " " + placarVisitante;
+				+ " " + placarCasa + " x " + placarVisitante + " " + timeVisitante.getNome() + " " + placarVisitante;
 	}
 }
